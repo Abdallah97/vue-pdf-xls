@@ -64,9 +64,7 @@ export default {
   },
   methods: {
     loadData() {
-      this.apiData = fetch(
-        "https://jsonplaceholder.typicode.com/posts?_limit=5"
-      )
+      this.apiData = fetch("https://jsonplaceholder.typicode.com/posts")
         .then((response) => response.json())
         .then((json) => (this.apiData = json));
     },
