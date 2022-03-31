@@ -1,14 +1,17 @@
 <template>
+  <navbar></navbar>
   <generate-api />
 </template>
 
 <script>
 import GenerateApi from "./components/GenerateApi.vue";
+import Navbar from "./components/Navbar.vue";
 
 export default {
   name: "App",
   components: {
     GenerateApi,
+    Navbar,
   },
 };
 </script>

@@ -1,17 +1,24 @@
 <template>
   <button class="btb btn-primary m-5" @click="loadData">Load Data</button>
-  <button class="btb btn-primary m-5" @click="createPost">Create Post</button>
-  <button class="btb btn-primary m-5" @click="updatePost">Update Post</button>
-  <button class="btb btn-primary m-5" @click="excelFunc">Generate Excel</button>
+  <button class="btb btn-success m-5" @click="createPost">Create Post</button>
+  <button class="btb btn-info m-5" @click="updatePost">Update Post</button>
+  <button
+    v-if="apiData.length != 0"
+    class="btb btn-danger m-5"
+    @click="excelFunc"
+  >
+    Generate Excel From Api
+  </button>
 
   <button
     v-if="apiData.length != 0"
     @click="generateTable"
     class="btb btn-success m-5"
   >
-    Generate Api Pdf
+    Generate Pdf From Api
   </button>
   <div class="container card" style="width: 18rem">
+    <p>Posts Titles</p>
     <ul v-if="apiData.length != 0" class="list-group list-group-flush">
       <li
         @click="loadPostComment(post.id)"
