@@ -9,6 +9,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "js-xlsx": "^0.8.22",
+    "json-as-xlsx": "^2.4.0",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.23",
     "vue": "^3.0.0"
   },
   "devDependencies": {
